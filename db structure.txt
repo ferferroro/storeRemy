@@ -1,0 +1,40 @@
+Product Maintenance Table:
+code - unique
+description
+cost
+sell
+grossProfit
+
+Supplier Maintenance Table:
+code - unique
+name
+sell
+
+SupplierProduct Table:
+id
+product_cost
+supplier_code
+sell
+
+User Maintenance Table:
+userName - unique
+password - encrypted
+name
+role - admin/sales
+hideCost - hide cost for role = sales
+
+Contact Table:
+id
+source - Supplier or User
+primary - boolean
+name
+Phone
+Mobile
+
+Address Table:
+id
+source - Supplier or User
+primary - boolean
+address
+
+Logs Table - TBA
