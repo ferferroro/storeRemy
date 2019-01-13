@@ -1,27 +1,29 @@
 Product Maintenance Table:
-code - unique
-description
-cost
-sell
-grossProfit
+id: auto generated
+code: char - uniq
+description: char
+cost: decimal
+sell: decimal
+grossProfit: decimal - store percentage
 
 Supplier Maintenance Table:
-code - unique
-name
-sell
+id: auto generated
+name: char
 
 SupplierProduct Table:
-id
-product_cost
-supplier_code
-sell
+id: auto generated
+product_id: from Product Maintenance
+supplier_id: from Supplier maint
+sell: decimal
 
 User Maintenance Table:
-userName - unique
-password - encrypted
-name
+id: auto generated
+userName: char - must be uniq
+password: encrypted
+name: char
 role - admin/sales
-hideCost - hide cost for role = sales
+hideCost - boolean: hide cost for role = sales
+status: char - pending/active/inactive
 
 Contact Table:
 id
@@ -36,5 +38,7 @@ id
 source - Supplier or User
 primary - boolean
 address
+
+
 
 Logs Table - TBA
